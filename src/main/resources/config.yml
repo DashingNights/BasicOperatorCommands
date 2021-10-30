@@ -1,0 +1,10 @@
+# -----------------------------------------------------
+# spawnloc: hub, 1, 71, 0, -90, 2
+# commandspawn: 'hub, 1, 71, 0, -90, 2'
+# this is not used right now
+# -----------------------------------------------------
+Spawncommand enabled: false
+
+SpawnCommandMessage: '&6&lTeleported to spawn!'
+GmcMsg: '&eYour gamemode has been set to &6CREATIVE.'
+GmsMsg: '&eYour gamemode has been set to &6SURVIVAL.'

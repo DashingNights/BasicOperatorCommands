@@ -1,0 +1,25 @@
+name: Basics
+version: ${project.version}
+main: net.hypedkey.basics.Basics
+api-version: 1.17
+prefix: Basics
+authors: [ HypedKey ]
+description: Basics - insipred from essentials, but more customized for LustreCrew mc servers. Though you can still use it in other servers
+website: https://lustrecrew.net/
+commands:
+  spawn:
+    description: Spawn
+    usage: /<command>
+    permission: basics.spawn
+  gmc:
+    description: Creative
+    usage: /<command>
+    permission: basics.gmc
+  gms:
+    description: Survival
+    usage: /<command>
+    permission: basics.gms
+  boom:
+    description: boom
+    usage: /<command>
+    permission: boom.gms
