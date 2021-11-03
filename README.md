@@ -1,5 +1,5 @@
 ### BasicOperatorCommands
-##Commands
+#Commands
 - /gmc | Gamemode Creative
 - /gms | Gamemode Survival
 - /gmsp | Gamemode Spectator
