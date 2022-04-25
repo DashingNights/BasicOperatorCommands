@@ -18,12 +18,9 @@ public class Gmc implements CommandExecutor {
 
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-        if (sender instanceof Player) {
-            Player player = (Player) sender;
+        if (sender instanceof Player player) {
             player.setGameMode(GameMode.CREATIVE);
             player.sendMessage(ChatColor.translateAlternateColorCodes('&', main.getConfig().getString("GmcMsg")));
-
-
         }
         return true;
     }

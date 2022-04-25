@@ -3,7 +3,7 @@
 # commandspawn: 'hub, 1, 71, 0, -90, 2'
 # this is not used right now
 # -----------------------------------------------------
-Spawncommand enabled: false
+spawn_cmd_enabled: false
 
 SpawnCommandMessage: '&6&lTeleported to spawn!'
 GmcMsg: '&eYour gamemode has been set to &6CREATIVE.'

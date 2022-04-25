@@ -5,21 +5,14 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 public final class Basics extends JavaPlugin {
 
-    Gmc gamemodec = (new Gmc(this));
-    Gms gamemodes = (new Gms(this));
-    Smite smite= (new Smite(this));
-    CommandSpawn commandSpawn = (new CommandSpawn(this));
-
     @Override
     public void onEnable() {
-        // Plugin startup logic
         this.getConfig().options().copyDefaults();
         saveDefaultConfig();
-        getLogger().info(Color.YELLOW+"Plugin enabled.");
-        this.getCommand("spawn").setExecutor(commandSpawn);
-        this.getCommand("gmc").setExecutor(gamemodec);
-        this.getCommand("gms").setExecutor(gamemodes);
-        this.getCommand("boom").setExecutor(smite);
-
+        getLogger().info(Color.YELLOW + "Basics Plugin enabled!");
+        this.getCommand("spawn").setExecutor(new CommandSpawn(this));
+        this.getCommand("gmc").setExecutor(new Gmc(this));
+        this.getCommand("gms").setExecutor(new Gms(this));
+        this.getCommand("boom").setExecutor(new Smite(this));
     }
 }

@@ -18,12 +18,9 @@ public class Gms implements CommandExecutor {
 
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-        if (sender instanceof Player) {
-            Player player = (Player) sender;
+        if (sender instanceof Player player) {
             player.setGameMode(GameMode.SURVIVAL);
             player.sendMessage(ChatColor.translateAlternateColorCodes('&', main.getConfig().getString("GmsMsg")));
-
-
         }
         return true;
     }

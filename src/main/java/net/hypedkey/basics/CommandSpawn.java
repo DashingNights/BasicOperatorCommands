@@ -18,21 +18,19 @@ public class CommandSpawn implements CommandExecutor {
 
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-        Player player = (Player) sender;
-        if (main.getConfig().getBoolean("true")) {
-            if (sender instanceof Player) {
-                World hub = player.getWorld();
-                Location loc = new Location(hub,132,65,57,0,0);
-                player.teleport(loc);
-                player.sendMessage(ChatColor.translateAlternateColorCodes('&', main.getConfig().getString("SpawnCommandMessage")));
-
+        if (main.getConfig().getBoolean("spawn_cmd_enabled")) {
+            if (sender instanceof Player p) {
+                p.teleport(p.getWorld().getSpawnLocation());
+                p.sendMessage(color(main.getConfig().getString("SpawnCommandMessage")));
             }
-            return true;
+        }else{
+            sender.sendMessage(color("&cThis command is disabled in config!"));
         }
-        else {
+        return true;
+    }
 
-            }
-        return false;
+    public static String color(String s){
+        return ChatColor.translateAlternateColorCodes('&',s);
     }
 }
 
